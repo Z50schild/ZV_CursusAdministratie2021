@@ -1,1 +1,18 @@
-<h3 class="text-center text-uppercase">Lijst met cursussen</h3>
+
+    <h3 class="text-center text-uppercase">Lijst met cursussen</h3>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr class="text-center text-uppercase">
+                <!-- <th>Start</th> -->
+                <th>Duur</th>
+                <th>Titel</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let c of cursussen">
+                <!-- <td>{{c.cursusinstanties.cursusinstantie[0].startdatum| customDate }}</td> -->
+                <td>{{c.duur}}</td>
+                <td>{{c.titel}}</td>
+            </tr>
+        </tbody>
+    </table>
