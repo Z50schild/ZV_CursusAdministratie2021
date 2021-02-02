@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ZV_CursusAdministratie
 {
@@ -9,6 +7,11 @@ namespace ZV_CursusAdministratie
     {
         public static void Register(HttpConfiguration config)
         {
+            //enable CORS for Angular
+            var cors = new EnableCorsAttribute("http://localhost:4200", "*", "*");
+            config.EnableCors(cors);
+            
+            
             // Web API configuration and services
 
             // Web API routes
