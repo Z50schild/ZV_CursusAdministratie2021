@@ -11,22 +11,14 @@ import {CursusInstantie} from "../api/models/cursusInstantie"
     styleUrls:['./cursus-list.component.css']    
 })
 
-export class CursusListComponent {
-    cursusinstanties: CursusInstantie[] = [new CursusInstantie(1, new Date('2021-02-20'))]
-    cursussen: Cursus[] =
-         [
-            new Cursus(1,5,'testtitel', 'tst', this.cursusinstanties) 
-         ];
+export class CursusListComponent implements OnInit {
 
-    getCursussen(){
-        return this.cursussen;
+    cursusInstanties!: CursusInstantie[];
+
+    constructor(private cursusService: CursusService){}
+
+    ngOnInit(){
+    this.cursusInstanties = this.cursusService.getCursusInstanties();
     }
 
-
-
-// constructor(private cursusService: CursusService){}
-
-// ngOnInit(){
-//     this.cursussen = this.cursusService.getCursussen();
-// }
 }
