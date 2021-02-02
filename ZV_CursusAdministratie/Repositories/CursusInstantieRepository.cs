@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using ZV_CursusAdministratie.Context;
 using ZV_CursusAdministratie.Entities;
@@ -7,16 +8,16 @@ namespace ZV_CursusAdministratie.Repositories
 {
     public class CursusInstantieRepository: ICursusInstantieRepository
     {
-        private CursusAdminContext db;
+        private CursusAdminContext context;
 
-        public CursusInstantieRepository(CursusAdminContext db)
+        public CursusInstantieRepository(CursusAdminContext datacontext)
         {
-            this.db = db;
+            context = datacontext;
         }
 
         public IEnumerable<CursusInstantie> GetAllCursusInstanties()
         {
-            return db.CursusInstanties.ToList();
+            return context.CursusInstanties.Include(c => c.Cursus).ToList();
         }
     }
 }

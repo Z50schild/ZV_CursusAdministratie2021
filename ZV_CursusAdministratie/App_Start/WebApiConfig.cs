@@ -10,9 +10,12 @@ namespace ZV_CursusAdministratie
             //enable CORS for Angular
             var cors = new EnableCorsAttribute("http://localhost:4200", "*", "*");
             config.EnableCors(cors);
-            
-            
+
+
             // Web API configuration and services
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            GlobalConfiguration.Configuration.Formatters.Remove(GlobalConfiguration.Configuration.Formatters.XmlFormatter);
+
 
             // Web API routes
             config.MapHttpAttributeRoutes();

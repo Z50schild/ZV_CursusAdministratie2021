@@ -2,6 +2,7 @@
 {
     using System;
     using System.Data.Entity.Migrations;
+    using System.Linq;
     using ZV_CursusAdministratie.Context;
     using ZV_CursusAdministratie.Entities;
 
