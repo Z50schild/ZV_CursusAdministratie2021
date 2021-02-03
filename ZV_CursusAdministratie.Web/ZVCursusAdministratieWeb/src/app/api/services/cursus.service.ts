@@ -18,7 +18,7 @@ export class CursusService {
          ];
 
 
-    url = 'https://localhost:44347/'
+    url = 'https://localhost:44347/Api/Cursusinstantie'
     constructor(private http: HttpClient){}
 
 
