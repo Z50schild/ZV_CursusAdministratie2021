@@ -2,6 +2,8 @@ import { sharedStylesheetJitUrl } from "@angular/compiler";
 import { Component, Input, OnInit } from "@angular/core";
 import { Cursus } from "../api/models/cursus";
 import { CursusService } from "../api/services/cursus.service";
+import {CursusInstantie} from "../api/models/cursusInstantie";
+import {HttpClient} from '@angular/common/http';
 
 
 @Component({
@@ -10,12 +12,22 @@ import { CursusService } from "../api/services/cursus.service";
     styleUrls:['./cursus-list.component.css']    
 })
 
-export class CursusListComponent implements OnInit{
-cursussen!: Cursus[];
+export class CursusListComponent implements OnInit {
 
-constructor(private cursusService: CursusService){}
+    //cursusInstanties!: CursusInstantie[];
+    cursusInstanties!: string[];
 
-ngOnInit(){
-    this.cursussen = this.cursusService.getCursussen();
-}
+    //constructor(private cursusService: CursusService){}
+    constructor(private httpService: HttpClient){}
+
+    ngOnInit(): void{
+    //this.cursusInstanties = this.cursusService.getCursusInstanties();
+        this.httpService.get('https://localhost:44347//Api/CursusInstantie')
+        .subscribe(
+            data =>{
+                this.cursusInstanties = data as string[]
+            }
+        )
+    }
+
 }
