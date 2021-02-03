@@ -14,20 +14,19 @@ import {HttpClient} from '@angular/common/http';
 
 export class CursusListComponent implements OnInit {
 
-    //cursusInstanties!: CursusInstantie[];
-    cursusInstanties!: string[];
+    cursusInstanties!: CursusInstantie[];
 
-    //constructor(private cursusService: CursusService){}
-    constructor(private httpService: HttpClient){}
+    constructor(private cursusService: CursusService){}
 
-    ngOnInit(): void{
-    //this.cursusInstanties = this.cursusService.getCursusInstanties();
-        this.httpService.get('https://localhost:44347//Api/CursusInstantie')
+    ngOnInit(){
+        this.cursusService.getCursusInstanties()
         .subscribe(
             data =>{
-                this.cursusInstanties = data as string[]
+                this.cursusInstanties = data as CursusInstantie[]
             }
         )
     }
+
+    
 
 }
