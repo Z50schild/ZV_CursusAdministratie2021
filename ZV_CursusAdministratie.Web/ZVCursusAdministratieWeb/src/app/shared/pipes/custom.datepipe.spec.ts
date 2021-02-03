@@ -12,6 +12,6 @@ describe('Pipe: customDate', () =>{
 
     it('should format a date', ()=>{
         let c= new CursusInstantie(1, new Date('2020-02-02'), new Cursus(1, 5, 'testTitel', 'tst'),1);
-        expect(customDatePipe.transform(c.startdatum, undefined)).toBe('02/02/2020')
+        expect(customDatePipe.transform(c.Startdatum, undefined)).toBe('02/02/2020')
     })
 })

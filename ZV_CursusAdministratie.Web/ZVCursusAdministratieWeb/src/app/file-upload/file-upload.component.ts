@@ -1,12 +1,11 @@
-import { componentFactoryName } from "@angular/compiler";
 import { Component } from "@angular/core";
-import { Component, Input, OnInit } from '@angular/core';
-import { UploadService } from "../services/upload.service";
+import { UploadService } from '../api/services/upload.service';
 
 
 @Component({
     selector: 'upload-file',
-    templateUrl: './upload-file.component.html'
+    templateUrl: './file-upload.component.html',
+    styleUrls:['./file-upload.component.css']
 })
 
 export class UploadFileComponent{
