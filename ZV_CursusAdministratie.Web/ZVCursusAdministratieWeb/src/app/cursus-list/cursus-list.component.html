@@ -1,18 +1,19 @@
-
+<div class="container">
     <h3 class="text-center text-uppercase">Lijst met cursussen</h3>
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped col-md-6">
         <thead>
             <tr class="text-center text-uppercase">
-                <!-- <th>Start</th> -->
+                <th>Start</th>
                 <th>Duur</th>
                 <th>Titel</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor = "let c of cursussen">
-                <!-- <td>{{c.cursusinstanties.cursusinstantie[0].startdatum| customDate }}</td> -->
-                <td>{{c.duur}}</td>
-                <td>{{c.titel}}</td>
+            <tr class="text-center" *ngFor = "let c of cursusInstanties">
+                <td>{{c.Startdatum | customDate }}</td>
+                <td>{{c.Cursus.Duur}}</td>
+                <td>{{c.Cursus.Titel}}</td>
             </tr>
         </tbody>
     </table>
+    </div>
