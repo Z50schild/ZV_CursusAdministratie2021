@@ -1,4 +1,18 @@
-    <div class="file-input">
-        <label for="file">Kies bestand</label>
-        <input type="file" id="file" >
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <!-- <input type="file" id="uploadFile" multiple accept=".txt" #file /> -->
+    <input type="file" id="uploadFile" name="uploadFile" (change)="onFileChange($event)" #file />
+
+    <!-- <input type="file" id="uploadFile" name="uploadFile" (change)="onFileChange($event.target.files)" #file /> -->
+    <button type="submit">Upload</button>
+
+</form>
+
+<div>
+    <div *ngIf="error">
+        {{ error.message }}
+        <div *ngIf="response">
+            {{response.message}}
+        </div>
+
+
     </div>

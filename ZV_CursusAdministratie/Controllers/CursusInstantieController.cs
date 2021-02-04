@@ -21,7 +21,7 @@ namespace ZV_CursusAdministratie.Controllers
         }
 
         [HttpGet]
-        [Route("Api/Cursusinstantie")]
+        [Route("api/Cursusinstantie")]
         public IEnumerable<CursusInstantie> GetAllCursusInstanties()
         {
             var product = cursusInstantieRepository.GetAllCursusInstanties();

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { CursusListComponent } from './cursus-list/cursus-list.component';
 import { CustomDatePipe } from './shared/pipes/custom.datepipe';
 import { UploadFileComponent } from './file-upload/file-upload.component'
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UploadFileComponent } from './file-upload/file-upload.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     CursusService,
