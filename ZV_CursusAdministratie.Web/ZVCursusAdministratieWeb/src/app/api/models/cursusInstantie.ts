@@ -2,7 +2,6 @@ import { Cursus } from './cursus'
 
 
 export class CursusInstantie {
-    constructor(public id: number, public startdatum: Date, public cursus: Cursus, public cursusId: number) {}
-    // id: number;
-    // startdatum: Date;
+    constructor(public Id: number, public Startdatum: Date, public Cursus: Cursus, public CursusId: number) {}
+    
 }

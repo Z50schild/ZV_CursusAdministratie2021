@@ -9,11 +9,16 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="text-center" *ngFor = "let c of cursusInstanties">
+            <tr class="text-center" *ngFor="let c of cursusInstanties">
                 <td>{{c.Startdatum | customDate }}</td>
                 <td>{{c.Cursus.Duur}}</td>
                 <td>{{c.Cursus.Titel}}</td>
             </tr>
         </tbody>
     </table>
+
+    <div class="containter">
+        <upload-file></upload-file>
     </div>
+
+</div>
