@@ -12,7 +12,7 @@ export class UploadService {
 
 
     public upload(file: File): Observable<boolean> {
-        let postUrl = 'https://localhost:44347/api/UploadFile';
+        let postUrl = 'https://localhost:44347/api/uploadfile';
         let formData: FormData = new FormData();
         formData.append('file', file, file.name);
         return this.httpClient

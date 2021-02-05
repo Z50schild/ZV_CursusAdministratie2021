@@ -177,6 +177,7 @@
     <Compile Include="Entities\configurations\CursusInstantieConfiguratie.cs" />
     <Compile Include="Entities\Cursus.cs" />
     <Compile Include="Entities\CursusInstantie.cs" />
+    <Compile Include="Exceptions\FileToObjectException.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

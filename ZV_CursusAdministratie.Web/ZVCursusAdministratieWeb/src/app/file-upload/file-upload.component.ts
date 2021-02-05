@@ -38,6 +38,9 @@ export class UploadFileComponent implements OnInit {
 
 
     submit() {
+        this.response.message = '';
+        this.error.message = '';
+
         if (this.fileUpload) {
             this.uploadService.upload(this.fileUpload).subscribe(
                 data => { this.response.message = `Bestand ${this.fileUpload.name} is verstuurd.` },
