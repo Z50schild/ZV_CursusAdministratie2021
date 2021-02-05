@@ -8,7 +8,7 @@ import {Observable, Subscriber} from 'rxjs'
 })   
 
 export class CursusService {
-    url = 'https://localhost:44347/api/Cursusinstantie'
+    url = 'https://localhost:44347/api/CursusInstantie'
     constructor(private http: HttpClient){}
 
     private cursusObservable!: Observable<CursusInstantie[]>;

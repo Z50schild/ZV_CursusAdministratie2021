@@ -31,6 +31,8 @@ export class UploadFileComponent implements OnInit {
     // }
 
     onFileChange(event: any) {
+        this.response.message = '';
+        this.error.message = '';
         this.fileUpload = event.target.files[0]
     }
 
